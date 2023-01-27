@@ -200,3 +200,32 @@
     return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
   }
 })();
+
+// mail form
+const btn = document.getElementById("formButton");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  btn.value = "Sending...";
+
+  const serviceID = "service_wgni48b";
+  const templateID = "template_63dvxy4";
+  const email = document.getElementById("email");
+  const text = document.getElementById("text");
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.value = "Send Email";
+      this.value = "";
+
+      text.value = "";
+      email.value = "";
+      alert("Sent!");
+    },
+    (err) => {
+      btn.value = "Send Email";
+      alert(JSON.stringify(err));
+    }
+  );
+});

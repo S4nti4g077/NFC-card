@@ -10,6 +10,13 @@
         <link rel="stylesheet" href="./styles.css">
         
     <title>NFC Visit Card</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("s8azO2HLjz1-nxrAs");
+        })();
+    </script>
 </head>
 <body class="mb-5">
    <!-- navbar -->
@@ -24,10 +31,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><strong>Home</strong></a>
+                    <a class="nav-link active" aria-current="page" href="#large-header"><strong>Home</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Features</strong></a>
+                    <a class="nav-link" href="#features"><strong>Features</strong></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><strong>Price</strong></a>
@@ -118,7 +125,7 @@
 <div class="container my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, sequi excepturi? In, sunt error dicta voluptatibus optio, quos excepturi quo quibusdam sapiente aspernatur quod eveniet modi doloremque dolores? Voluptas ipsam labore, animi at illum corporis est ratione expedita harum tempora mollitia totam dignissimos consequatur nisi voluptatibus quibusdam molestiae magnam! Neque.</div>
 
 <!-- okienka -->
-<div class="container">
+<div class="container" id="features">
     <div class="card-group"><div class="card" style="width: 18rem;">
     <img src="./images/karta.jpg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -149,6 +156,19 @@
 </div>
 </div></div>
 
+<div class="container">
+<form id="form">
+<div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" name='email' class="form-control" id="email" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+    <label for="text" class="form-label">Example textarea</label>
+    <textarea class="form-control" name="message" id="text" rows="3"></textarea>
+</div>
+<button class="btn btn-primary" id="formButton">Submit</button>
+</form>
+</div>
 <!-- partial -->
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
@@ -161,5 +181,6 @@
     integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
     crossorigin="anonymous"></script>
     <script src="./app.js"></script>
+    
 </body>
 </html>
