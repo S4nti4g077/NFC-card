@@ -93,13 +93,13 @@ html {
   height: 400px;
 }
 .a1 {
-  background-image: url("https://images.pexels.com/photos/1516654/pexels-photo-1516654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("/images/business-card.jpg");
 }
 .a2 {
-  background-image: url("https://images.pexels.com/photos/1056555/pexels-photo-1056555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("/images/meeting.jpg");
 }
 .a3 {
-  background-image: url("https://images.pexels.com/photos/129207/pexels-photo-129207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("/images/connect.jpg");
   color: #fff;
 }
 .a4 {
@@ -107,7 +107,7 @@ html {
   color: #fff;
 }
 .a5 {
-  background-image: url("https://images.pexels.com/photos/220994/pexels-photo-220994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("/images/aboutus.jpg");
 }
 p {
   font-weight: normal;
