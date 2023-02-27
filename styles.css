@@ -151,8 +151,15 @@ h1 {
     height: 500px;
     padding-bottom: 10px;
   }
+  .accordion {
+    height: 300px;
+  }
 }
-
+@media (min-width: 300px) and (max-width: 800px) {
+  .accordion {
+    height: 250px;
+  }
+}
 .paddingx {
   padding-right: 12vw;
   padding-left: 12vw;
