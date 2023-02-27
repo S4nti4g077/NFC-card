@@ -155,9 +155,10 @@ h1 {
     height: 300px;
   }
 }
+
 @media (min-width: 300px) and (max-width: 800px) {
   .accordion {
-    height: 250px;
+    height: 300px;
   }
 }
 .paddingx {
