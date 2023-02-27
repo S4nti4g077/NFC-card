@@ -152,3 +152,8 @@ h1 {
     padding-bottom: 10px;
   }
 }
+
+.paddingx {
+  padding-right: 12vw;
+  padding-left: 12vw;
+}
