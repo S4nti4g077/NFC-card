@@ -128,13 +128,12 @@ h1 {
   margin: 100px auto 20px auto;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   body {
     margin: 0;
   }
   .accordion {
     flex-direction: column;
-    height: 700px;
     box-shadow: none;
   }
   .box {
@@ -151,17 +150,7 @@ h1 {
     height: 500px;
     padding-bottom: 10px;
   }
-  .accordion {
-    height: 300px;
-  }
 }
 
-@media (min-width: 300px) and (max-width: 800px) {
-  .accordion {
-    height: 300px;
-  }
-}
-.paddingx {
-  padding-right: 12vw;
-  padding-left: 12vw;
+.accordion {
 }
