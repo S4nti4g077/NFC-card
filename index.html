@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="./styles.css">
-        
+    <link rel="stylesheet" href="./styles.css">
+
     <title>NFC Visit Card</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -17,258 +21,334 @@
             emailjs.init("s8azO2HLjz1-nxrAs");
         })();
     </script>
+
 </head>
+
 <body class="mb-5">
-   <!-- navbar -->
-<div class="menu-bar sticky-top shadow">
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <a class="navbar-brand text-white-50" href="#"><strong>NFC Card</strong></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#large-header"><strong>Home</strong></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#features"><strong>Features</strong></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Price</strong></a>
-                </li>
-                
-            </ul>
-        </div>
+    <!-- navbar -->
+    <div class="menu-bar sticky-top shadow">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white-50" href="#"><strong>Wizytówka NFC</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="#large-header"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features"><strong>O co chodzi?</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#price"><strong>Cena</strong></a>
+                        </li>
+<li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#email"><strong>Kontakt!</strong></a>
+</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-</nav>
-</div>
-<!-- partial:index.partial.html -->
-<div id="large-header" class="large-header">
-    <canvas id="demo-canvas"></canvas>
-    <h1 class="main-title">Wizytówka <span class="thin">NFC</span></h1>
-</div>
-<!-- INFO o wizytówce! -->
-<div class="container">
-    <h1 class="display-5 mt-5 mb-4 text-emphasis"><strong> </strong></h1>
-    <p class=" text-emphasis text-center text-auto"><strong>Witaj na stronie poświęconej naszej wizytówce NFC! Jest to nowatorska technologia,
-    która pozwala Ci łatwo i bezpiecznie wymieniać swoje dane kontaktowe. Karta ta jest wyposażona w mały chip, który
-    wykorzystuje technologię NFC do komunikacji z czytnikami telefonów. Ta technologia
-    pozwala Ci po prostu dotknąć kartą telefonu, aby udostępnić swoje dane. To
-    ułatwia udostępnianie swoich danych kontaktowych nowemu klientowi i daje nam pewność, że nie zgubi naszego kontaktu! Jesteśmy dumni z oferowania tej
-    innowacyjnej technologii naszym klientom i nie możemy doczekać się ułatwienia Ci pozostawania w kontakcie.<strong></p>
-</div>
-<!-- accordion - prices offer -->
-<h1>O karcie NFC</h1>
+    <!-- partial:index.partial.html -->
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <h1 class="main-title">Wizytówka <span class="thin">NFC</span></h1>
+    </div>
+    <!-- INFO o wizytówce! -->
+    <div class="container">
+        <h1 class="display-5 mt-5 mb-4 text-emphasis"><strong> </strong></h1>
+        <p class=" text-emphasis text-center text-auto"><strong>Hej! Wizytówka NFC to nowatorska technologia,
+                która pozwala Ci łatwo i bezpiecznie wymieniać swoje dane kontaktowe. Karta ta jest wyposażona w mały
+                chip, który
+                odczytasz za pomocą telefonów. Ta technologia
+                pozwala Ci po prostu dotknąć kartą telefonu nowo poznanej osoby, aby udostępnić swoje dane i da Ci
+                pewność, że nie zgubi Twojego kontaktu! Nie możemy doczekać się ułatwienia Ci pozostawania w
+                kontakcie.<strong></p>
+    </div>
+    <!-- accordion - prices offer -->
+    <h1>O karcie NFC</h1>
 
-<div class="accordion-horizontal accordion">
+    <div class="accordion-horizontal accordion">
 
-    <!-- BOX 1 -->
-    <div class="box a1">
-        <div class="image_1">
-            <div class="text">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum iaculis nisl sed dictum aliquam.
-                </p>
+        <!-- BOX 1 -->
+        <div class="box a1">
+            <div class="image_1">
+                <div class="text">
+                    <h2>Dane wizytówki</h2>
+                    <p>
+                        Wyślij nam: Imię, Nazwisko, Nazwę firmy, e-mail, adres www, a po zbliżeniu Twój nowy znajomy od
+                        razu zapisze te dane! Szybko, łatwo i bezbłędnie!
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- BOX 2 -->
-    <div class="box a2">
-        <div class="image_2">
-            <div class="text">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum iaculis nisl sed dictum aliquam.
-                </p>
+        <!-- BOX 2 -->
+        <div class="box a2">
+            <div class="image_2">
+                <div class="text">
+                    <h2>Instagram Facebook Youtube</h2>
+                    <p>
+                        Podaj swoją nazwę użytkownika, a po zbliżeniu do telefonu wyświetli się Twój profil! - Więcej
+                        obserwujących w krótkim czasie!
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- BOX 3 -->
-    <div class="box a3">
-        <div class="image_3">
-            <div class="text">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum iaculis nisl sed dictum aliquam.
-                </p>
+        <!-- BOX 3 -->
+        <div class="box a3">
+            <div class="image_3">
+                <div class="text">
+                    <h2>Twoja strona internetowa</h2>
+                    <p>
+                        Podaj adres WWW Twojej strony, a zbliżając kartę wyświetlisz swoją stronę! Menu restauracji?
+                        Aukcja? specyficzny link? żaden problem! szybko i łatwo!
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- BOX 1 -->
-    <div class="box a4">
-        <div class="image_4">
-            <div class="text">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum iaculis nisl sed dictum aliquam.
-                </p>
+        <!-- BOX 1 -->
+        <div class="box a4">
+            <div class="image_4">
+                <div class="text">
+                    <h2>Linedin</h2>
+                    <p>
+                        CV zawsze w twoim portfelu! Wystarczy zbliżyć telefon.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- BOX 5 -->
-    <div class="box a5">
-        <div class="image_5">
-            <div class="text">
-                <h2>Lorem Ipsum</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum iaculis nisl sed dictum aliquam.
-                </p>
-            </div>
-        </div>
-    </div>
 
-</div>
-<!-- wideoo -->
-<div class="container d-flex justify-content-center">
-    <div class="row">
-                <div class="col video d-flex container justify-content-center"><iframe  src="https://www.youtube.com/embed/4Qnc8yETDKw" title="NFC Visit Card" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen class="rounded-2"></iframe></div>
+
+    </div>
+    <!-- wideoo -->
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col video d-flex container justify-content-center"><iframe
+                    src="https://www.youtube.com/embed/4Qnc8yETDKw" title="NFC Visit Card" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen class="rounded-2"></iframe></div>
             <div class="col">
                 <div class="container fs-6 d-flex justify-content-center" id="features">
                     <div class="card-group">
                         <div class="card" style="width: 18rem;">
                             <img src="./images/karta.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text text-black"><strong>1. Wyciągnij swoją wizytówkę <br>z portfela!</strong></p>
+                                <p class="card-text text-black"><strong>1. Wyciągnij swoją wizytówkę <br>z
+                                        portfela!</strong></p>
                             </div>
                         </div>
                         <div class="card" style="width: 18rem;">
                             <img src="./images/wlacznfc2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text text-black"><strong>2. Poproś o odblokowanie telefonu twojego nowego znajomego</strong>
+                                <p class="card-text text-black"><strong>2. Poproś o odblokowanie telefonu twojego nowego
+                                        znajomego</strong>
                                 </p>
                             </div>
-                        </div>             
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col "><div class="container  pt-1 fs-6 d-flex justify-content-center" id="features">
+                </div>
+                <div class="row">
+                    <div class="col ">
+                        <div class="container  pt-1 fs-6 d-flex justify-content-center" id="features">
                             <div class="card-group">
                                 <div class="card background-blue" style="width: 18rem;">
                                     <img src="./images/zbliztel3.jpg" class=" mt-5 mb-5 card-img-top" alt="...">
                                     <div class="card-body">
-                                        <p class="card-text text-black"><strong>3. Zbliż kartę do telefonu <br>(z włączonym NFC!)</strong></p>
+                                        <p class="card-text text-black"><strong>3. Zbliż kartę do telefonu <br>(z
+                                                włączonym NFC!)</strong></p>
                                     </div>
                                 </div>
                                 <div class="card" style="width: 18rem;">
                                     <img src="./images/telefon4.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <p class="card-text text-black"><strong>4. Twoje dane zostały przekazane! Łatwo i przyjemnie przekazałeś
-                                                numer telefonu, imię, nazwisko oraz swoją stronę internetową Twojemu nowemu znajomemu!</strong>
+                                        <p class="card-text text-black"><strong>4. Twoje dane zostały przekazane! Łatwo
+                                                i przyjemnie przekazałeś
+                                                numer telefonu, imię, nazwisko oraz swoją stronę internetową Twojemu
+                                                nowemu znajomemu!</strong>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                        </div>  </div>
+                        </div>
                     </div>
-                    </div></div>
-                </div>
-                
-            </div>
-    </div>
-    </div>
-<!-- wizytówka NFC + zdjęcie-->
-<div class="container my-5 px-5">
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button class="accordion-button text-white" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                    aria-controls="panelsStayOpen-collapseOne">
-                    Wizytówka NFC (vCard)
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingOne">
-                <div class="accordion-body f">
-                    Zaprogramujemy Twoją kartę w dowolny sposób! Jako wizytówka - nie będziesz musiał nosić całego pliku wizytówek, wystarczy jedna karta, a każdy kto ma telefon w sekundę odczyta twoje dane kontaktowe i zapisze w swojej pamięci!
-                    Masz pewność, że nie zgubi Twojej wizytówki!
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseTwo">
-                    LinkedIn NFC
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingTwo">
-                <div class="accordion-body">
-                    Możesz również zapisać link do twojego profilu na LinkedIn! Zbliżając telefon do karty twój nowy kontakt momentalnie wyświetli Twój profil. Zapomnij o wysyłaniu linków, nazw użytkownika, czy maili z profilem, zwyczajnie zbliż telefon do karty
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button class="text-white accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseThree">
-                    Social media NFC
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-                aria-labelledby="panelsStayOpen-headingThree">
-                <div class="accordion-body">
-                    Jesteś influencerem? freelancerem? a może po prostu chcesz komuś szybko podać swoje konto na Youtube, Facebook, Instagram, czy Tik Tok? 
-                    Szybko i łatwo - zbliż telefon, a my zajmiemy się resztą!
                 </div>
             </div>
         </div>
     </div>
+
     </div>
-<img class="img-fluid position-absolute end-0 z-n1" style="width: 55rem" src="./images/card.jpg" alt="card">
+    </div>
+    </div>
+    <!-- wizytówka NFC + zdjęcie-->
+    <div class="container my-5 px-5">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Wizytówka NFC (vCard)
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body f">
+                        Zaprogramujemy Twoją kartę w dowolny sposób! Jako wizytówka - nie będziesz musiał nosić całego
+                        pliku wizytówek, wystarczy jedna karta, a każdy kto ma telefon w sekundę odczyta twoje dane
+                        kontaktowe i zapisze w swojej pamięci!
+                        Masz pewność, że nie zgubi Twojej wizytówki!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        LinkedIn NFC
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        Możesz również zapisać link do twojego profilu na LinkedIn! Zbliżając telefon do karty twój nowy
+                        kontakt momentalnie wyświetli Twój profil. Zapomnij o wysyłaniu linków, nazw użytkownika, czy
+                        maili z profilem, zwyczajnie zbliż telefon do karty
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="text-white accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        Social media NFC
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                        Jesteś influencerem? freelancerem? a może po prostu chcesz komuś szybko podać swoje konto na
+                        Youtube, Facebook, Instagram, czy Tik Tok?
+                        Szybko i łatwo - zbliż telefon, a my zajmiemy się resztą!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="img-fluid position-absolute end-0 z-n1" style="width: 55rem" src="./images/card.jpg" alt="card">
 
-<!-- info po opcjach (wizytówka NFC) -->
-<div class="container my-5 py-5 text-center"><h5>Kontakty międzyludzkie są dla nas najważniejsze. Wymiana imion, nazwisk, numerów, maili i stron internetowych czasem
-zwyczajnie zapomnimy czegoś podać! Wychodzimy temu naprzeciw i dajemy wam możliwość przekazania kompletu danych w ciągu
-sekundy do telefonu nowego kontaktu biznesowego i to w jakim stylu!</h5></div>
+    <!-- info po opcjach (wizytówka NFC) -->
+    <div class="container my-5 py-5 text-center">
+        <h5>Kontakty międzyludzkie są dla nas najważniejsze. Wymiana imion, nazwisk, numerów, maili i stron
+            internetowych czasem
+            zwyczajnie zapomnimy czegoś podać! Wychodzimy temu naprzeciw i dajemy wam możliwość przekazania kompletu
+            danych w ciągu
+            sekundy do telefonu nowego kontaktu biznesowego i to w jakim stylu!</h5>
+    </div>
 
-<!-- email form -->
-<div class="container px-5 pb-5">
-<form id="form">
-<div class="mb-3">
-    <label for="email" class="form-label">Email address</label>
-    <input type="email" name='email' class="form-control" id="email" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-    <label for="text" class="form-label">Example textarea</label>
-    <textarea class="form-control" name="message" id="text" rows="3"></textarea>
-</div>
-<button class="btn btn-primary" id="formButton">Submit</button>
-</form>
-</div>
+    <!-- price boxes -->
+        <div class="container mb-5 mt-5" id="price">
+            <div class="pricing card-deck flex-column flex-md-row mb-3">
+                <div class="card card-pricing text-center px-3 mb-4">
+                    <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Starter</span>
+                    <div class="bg-transparent card-header pt-4 border-0">
+                        <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="15">100<span
+                                class="price">zł</span><span class="h6 text-muted ml-2">+ wysyłka</span></h1>
+                    </div>
+                    <div class="card-body pt-0">
+                        <ul class="list-unstyled mb-4">
+                            <li>Wizytówka NFC</li>
+                            <li>Laserowy grawer danych firmy</li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <!-- <button type="button" class="btn btn-outline-secondary mb-3">Order now</button> -->
+                    </div>
+                </div>
+                <div class="card card-pricing popular shadow text-center px-3 mb-4">
+                    <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Professional</span>
+                    <div class="bg-transparent card-header pt-4 border-0">
+                        <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="30">200<span
+                                class="price">zł</span><span class="h6 text-muted ml-2"></span></h1>
+                    </div>
+                    <div class="card-body pt-0">
+                        <ul class="list-unstyled mb-4">
+                            <li>Wizytówka NFC</li>
+                            <li>Wygenerowanie kodu QR do strony internetowej firmy</li>
+                            <li>Grawer logo, danych firmy i kodu QR</li>
+                            <li>Wysyłka w cenie</li>
+                        </ul>
+                        <!-- <a href="https://www.totoprayogo.com" target="_blank" class="btn btn-primary mb-3">Order Now</a> -->
+                    </div>
+                </div>
+                <div class="card card-pricing text-center px-3 mb-4">
+                    <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Business</span>
+                    <div class="bg-transparent card-header pt-4 border-0">
+                        <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="45"><span
+                                class="price">X</span>zł<span class="h6 text-muted ml-2"></span></h1>
+                    </div>
+                    <div class="card-body pt-0">
+                        <ul class="list-unstyled mb-4">
+                            <li>10+ sztuk wizytówek (różne dane)</li>
+                            <li>Wygenerowanie kodu QR do strony internetowej</li>
+                            <li>Grawer Kodu QR, logo firmy oraz danych</li>
+                            <li>Wysyłka w cenie</li>
+                        </ul>
+                        <!-- <button type="button" class="btn btn-outline-secondary mb-3">Order now</button> -->
+                    </div>
+                </div>
+        
+            </div>
+        </div>
 
-<!-- footer  -->
-<div class="footer"></div>
-<!-- partial -->
-<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
-<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
-<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
+    <!-- email form -->
+    <div class="container px-5 pb-5" id="email">
+        <form id="form">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name='email' class="form-control" id="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">Wiadomość</label>
+                <textarea class="form-control"
+                    placeholder="Tu wpisz imię, nazwisko, numer telefonu, email, nazwę firmy oraz stronę www i adres. Dodaj informację czy ma dodawać nowy kontakt czy ma otwierać stronę www, a resztę pozostaw nam! Na wszystkie wątpliwości również odpowiemy, tylko poprawnie podaj swój email!"
+                    name="message" id="text" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary" id="formButton">Submit</button>
+        </form>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-    crossorigin="anonymous"></script>
+    <!-- footer  -->
+
+    <!------ Include the above in your HEAD tag ---------->
+
+
+
+
+    <!-- partial -->
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
     <script src="./app.js"></script>
-    
+
 </body>
+
 </html>

@@ -1,6 +1,6 @@
 body {
   background-image: linear-gradient(-90deg, #09457a, #090608);
-  color: rgb(227, 223, 223);
+  color: rgb(245, 245, 245);
 }
 /* Header */
 .large-header {
@@ -153,4 +153,12 @@ h1 {
 }
 
 .accordion {
+}
+.card-pricing.popular {
+  z-index: 1;
+  border: 3px solid #007bff;
+}
+.card-pricing .list-unstyled {
+  padding: 0.5rem 0;
+  color: #6c757d;
 }
