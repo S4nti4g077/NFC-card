@@ -227,19 +227,78 @@ sekundy do telefonu nowego kontaktu biznesowego i to w jakim stylu!</h5></div>
 <div class="container px-5 pb-5">
 <form id="form">
 <div class="mb-3">
-    <label for="email" class="form-label">Email address</label>
+    <label for="email" class="form-label">Email</label>
     <input type="email" name='email' class="form-control" id="email" placeholder="name@example.com">
 </div>
 <div class="mb-3">
-    <label for="text" class="form-label">Example textarea</label>
-    <textarea class="form-control" name="message" id="text" rows="3"></textarea>
+    <label for="text" class="form-label">Wiadomość</label>
+    <textarea class="form-control" placeholder="Tu wpisz imię, nazwisko, numer telefonu, email, nazwę firmy oraz stronę www i adres. Dodaj informację czy ma dodawać nowy kontakt czy ma otwierać stronę www, a resztę pozostaw nam! Na wszystkie wątpliwości również odpowiemy, tylko poprawnie podaj swój email!" name="message" id="text" rows="3"></textarea>
 </div>
 <button class="btn btn-primary" id="formButton">Submit</button>
 </form>
 </div>
 
 <!-- footer  -->
-<div class="footer"></div>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container mb-5 mt-5">
+    <div class="pricing card-deck flex-column flex-md-row mb-3">
+        <div class="card card-pricing text-center px-3 mb-4">
+            <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Starter</span>
+            <div class="bg-transparent card-header pt-4 border-0">
+                <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="15">100<span
+                        class="price">zł</span><span class="h6 text-muted ml-2">+ wysyłka</span></h1>
+            </div>
+            <div class="card-body pt-0">
+                <ul class="list-unstyled mb-4">
+                    <li>Wizytówka NFC</li>
+                    <li>Laserowy grawer danych firmy</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button type="button" class="btn btn-outline-secondary mb-3">Order now</button>
+            </div>
+        </div>
+        <div class="card card-pricing popular shadow text-center px-3 mb-4">
+            <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Professional</span>
+            <div class="bg-transparent card-header pt-4 border-0">
+                <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="30">200<span
+                        class="price">zł</span><span class="h6 text-muted ml-2"></span></h1>
+            </div>
+            <div class="card-body pt-0">
+                <ul class="list-unstyled mb-4">
+                    <li>Wizytówka NFC</li>
+                    <li>Wygenerowanie kodu QR do strony internetowej firmy</li>
+                    <li>Grawer logo, danych firmy i kodu QR</li>
+                    <li>Wysyłka w cenie</li>
+                </ul>
+                <a href="https://www.totoprayogo.com" target="_blank" class="btn btn-primary mb-3">Order Now</a>
+            </div>
+        </div>
+        <div class="card card-pricing text-center px-3 mb-4">
+            <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Business</span>
+            <div class="bg-transparent card-header pt-4 border-0">
+                <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="45"><span
+                        class="price">X</span><span class="h6 text-muted ml-2">zł</span></h1>
+            </div>
+            <div class="card-body pt-0">
+                <ul class="list-unstyled mb-4">
+                    <li>10+ sztuk wizytówek (różne dane)</li>
+                    <li>Wygenerowanie kodu QR do strony internetowej</li>
+                    <li>Grawer Kodu QR, logo firmy oraz danych</li>
+                    <li>Wysyłka w cenie</li>
+                </ul>
+                <button type="button" class="btn btn-outline-secondary mb-3">Order now</button>
+            </div>
+        </div>
+      
+    </div>
+</div>
+
+
 <!-- partial -->
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
